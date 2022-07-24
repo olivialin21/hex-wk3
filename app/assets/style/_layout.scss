@@ -5,7 +5,7 @@
   a{
     display: block;
     color: $c-white;
-
+ 
     &:hover{
       color: $c-lightRed;
     }
@@ -26,13 +26,45 @@
     width: 80px;
   }
   .nav{
+    @include nav{
+      flex-direction: column;
+      max-height: 0px;
+      position: absolute;
+      z-index: 99;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background: $c-black;
+      transition: max-height 1s;
+      overflow: hidden;
+
+      &.show{
+        max-height: 200px;
+      }
+    }
 
     a{
       padding: 0 32px;
       font-size: $fz-body4;
+
+      @include nav{
+        padding: 10px 13px;
+      }
     }
     li:last-child a{
       padding-right: 0;
+    }
+  }
+  .nav-ham{
+    display: none;
+    font-size: 30px;
+    color: $c-white;
+
+    @include nav{
+      display: block;
+    }
+    &.open{
+
     }
   }
 }
@@ -43,6 +75,9 @@
   color: $c-white;
   background-color: $c-red;
 
+  @include mobile{
+    padding-top: 24px;
+  }
   a{
     color: $c-white;
 
@@ -50,14 +85,26 @@
       color: $c-lightRed;
     }
   }
-  .line-1{
+  .info{
+    display: flex;
+    flex-direction: column;
+
+    @include mobile{
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  .info-1{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 24px;
   }
   .nav{
-
+    @include mobile{
+      display: none;
+    }
     a{
       padding: 0 24px;
     }
@@ -69,17 +116,27 @@
     display: flex;
     gap: 32px;
 
+    @include pad{
+      gap: 16px;
+    }
     img{
       width: 48px;
 	    transition: all 0.3s;
+
+      @include mobile{
+        width: 24px;
+      }
     }
     a:hover img{
       transform: scale(1.2);
     }
   }
-  .line-2{
+  .info-2{
     margin-bottom: 32px;
 
+    @include mobile{
+      margin-bottom: 24px;
+    }
     li{
       display: flex;
       align-items: center;
@@ -90,11 +147,18 @@
     }
     img{
       width: 36px;
+
+      @include mobile{
+        width: 18px;
+      }
     }
     a{
       margin-left: 16px;
       font-size: $fz-body1;
-      line-height: 54px;
+      
+      @include mobile{
+        font-size: $fz-body5;
+      }
     }
   }
   .copyright{
@@ -106,6 +170,17 @@
     ul{
       display: flex;
       gap: 48px;
+
+      @include mobile{
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+    @include mobile{
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 16px;
+      padding-bottom: 24px;
     }
   }
 }

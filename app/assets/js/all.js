@@ -1,5 +1,8 @@
 console.log('Hello!');
 
 $(document).ready(() => {
-  console.log('HesSchool Hello!');
+  $('.nav-ham').click(function(){
+		$(this).toggleClass('open');
+    $('.nav').toggleClass('show');
+  });
 });
