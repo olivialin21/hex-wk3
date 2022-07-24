@@ -37,14 +37,18 @@
 
 .banner{
   height: 787px;
+  text-align: right;
+  color: $c-darkRed;
   background-image: url(../images/desktop/home-header.png);
   background-position: center;
   background-size: cover;
-  text-align: right;
-  color: $c-darkRed;
 
   @include pad{
+    background-image: url(../images/tablet/home-header.png);
+  }
+  @include mobile{
     height: 396px;
+    background-image: url(../images/mobile/home-header.png);
   }
   .container{
     display: flex;
