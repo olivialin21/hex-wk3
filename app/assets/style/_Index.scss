@@ -1,14 +1,5 @@
 // index
 .index{
-  .section{
-    padding-top: 80px;
-    padding-bottom: 80px;
-
-    @include mobile{
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
-  }
   .title{
     font-size: $fz-title2;
     font-weight: bold;
@@ -30,64 +21,61 @@
       }
     }
   }
-  .c-white{
-    color: $c-white;
-  }
-}
-
-.banner{
-  height: 787px;
-  text-align: right;
-  color: $c-darkRed;
-  background-image: url(../images/desktop/home-header.png);
-  background-position: center;
-  background-size: cover;
-
-  @include pad{
-    background-image: url(../images/tablet/home-header.png);
-  }
-  @include mobile{
-    height: 396px;
-    background-image: url(../images/mobile/home-header.png);
-  }
-  .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    height: 100%;
-  }
-  p{
-    font-size: $fz-body1;
-
-    @include mobile{
-      font-size: $fz-body5;
+  .banner{
+    height: 787px;
+    text-align: right;
+    color: $c-darkRed;
+    background-image: url(../images/desktop/home-header.png);
+    background-position: center;
+    background-size: cover;
+  
+    @include pad{
+      background-image: url(../images/tablet/home-header.png);
     }
-  }
-  h2{
-    font-size: $fz-title1;
-    font-weight: bold;
-    margin-bottom: 4px;
-
     @include mobile{
-      font-size: $fz-body3;
-      margin-bottom: 8px;
+      height: 396px;
+      background-image: url(../images/mobile/home-header.png);
     }
-  }
-  a{
-    display: inline-block;
-    padding: 6px 12px;
-    font-size: $fz-body4;
-    font-weight: 500;
-    color: $c-white;
-    background-color: $c-red;
-
-    &:hover{
-      background-color: $c-darkRed;
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      height: 100%;
+    }
+    p{
+      font-size: $fz-body1;
+  
+      @include mobile{
+        font-size: $fz-body5;
+      }
+    }
+    h2{
+      font-size: $fz-title1;
+      font-weight: bold;
+      margin-bottom: 4px;
+  
+      @include mobile{
+        font-size: $fz-body3;
+        margin-bottom: 8px;
+      }
+    }
+    a{
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: $fz-body4;
+      font-weight: 500;
+      color: $c-white;
+      background-color: $c-red;
+  
+      &:hover{
+        background-color: $c-darkRed;
+      }
     }
   }
 }
 
+// features
 .features{
   background-color: $c-rice;
 
@@ -122,6 +110,7 @@
   }
 }
 
+// series
 .series{
   img{
     margin-bottom: 8px;
@@ -146,6 +135,7 @@
   }
 }
 
+// coBranding
 .coBranding{
   background-image: url(../images/desktop/background-desktop.png);
   background-position: center;
@@ -165,6 +155,7 @@
   }
 }
 
+// recommend
 .recommend{
   ul{
     display: flex;
@@ -197,6 +188,7 @@
   }
 }
 
+// contact
 .contact{
   background-color: $c-rice;
 

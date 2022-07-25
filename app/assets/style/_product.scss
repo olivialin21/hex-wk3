@@ -1,0 +1,180 @@
+// product
+.product{
+  .nav{
+    .container {
+      @include pad{
+        padding: 0;
+      }
+    }
+    ul{
+      display: flex;
+      
+      li{
+        width: 100%;
+      }
+      a{
+        display: block;
+        position: relative;
+        padding: 24px 0;
+        border: 1px solid $c-lightGray;
+        text-align: center;
+        font-size: $fz-body2;
+        font-weight: 500;
+        color: $c-black;
+  
+        @include pad{
+          padding: 16px 0;
+          font-size: $fz-body3;
+        }
+        @include mobile{
+          font-size: $fz-body5;
+        }
+        &:hover::before{
+          content: '';
+          width: 100%;
+          height: 8px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background-color: $c-lightGray;
+        }
+        &.active::after{
+          content: '';
+          width: 100%;
+          height: 8px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background-color: $c-red;
+        }
+      }
+    }  
+  }
+  .banner{
+    display: flex;
+
+    img{
+      width: 100%;
+      height: 296px;
+      object-fit: cover;
+
+      @include mobile{
+        height: 136px;
+      }
+    }
+  }
+  h2{
+    font-size: $fz-title3;
+    font-weight: 500;
+    text-align: center;
+
+    @include mobile{
+      font-size: $fz-body3;
+    }
+  }
+  h3{
+    font-size: $fz-body2;
+    text-align: center;
+    margin-bottom: 32px;
+
+    @include mobile{
+      font-size: $fz-body3;
+      margin-bottom: 24px;
+    }
+  }
+  .product-list{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 80px;
+    column-gap: 24px;
+    margin-bottom: 80px;
+
+    @include pad{
+      row-gap: 40px;
+    }
+    @include mobile{
+      row-gap: 24px;
+      margin-bottom: 64px;
+    }
+    li{
+      width: calc((100% - 72px) / 4);
+
+      @include pad{
+        width: calc((100% - 24px) / 2);
+      }
+      @include mobile{
+        width: 100%;
+      }
+    }
+    .line-1{
+      display: flex;
+      justify-content: space-between;
+      font-size: $fz-body3;
+    }
+    p{
+      font-weight: 500;
+      color: $c-darkRed;
+    }
+    .line-2{
+      display: flex;
+      gap: 8px;
+
+      .box{
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+      }
+    }
+  }
+  .pages{
+    display: flex;   
+    justify-content: center;
+
+    a{
+      display: block;
+      margin-left: -1px;
+      padding: 0 16px;
+      line-height: 48px;
+      color: $c-black;
+      background-color: $c-white;
+      border: 1px solid #555;
+      
+      @include mobile{
+        padding: 0 12px;
+      }
+      &:hover{
+        background-color: #F2F2F2;
+      }
+      &.active{
+        color: $c-white;
+        background-color: $c-black;
+      }
+    }
+    .py-12{
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+
+  .py-80{
+    @include mobile{
+      padding-bottom: 64px;
+    }
+  }
+}
+
+// sunglasses
+.sunglasses{
+  .product-list{
+    li{
+      width: calc((100% - 48px) / 3);
+
+      @include pad{
+        width: calc((100% - 24px) / 2);
+      }
+      @include mobile{
+        width: 100%;
+      }
+    }
+  }
+}

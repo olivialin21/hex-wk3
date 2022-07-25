@@ -32,3 +32,23 @@ a{
 		padding: 0 13px;
 	}
 }
+
+.c-white{
+	color: $c-white;
+}
+.bg-brown{
+	background-color: #5F3E2D;
+}
+.bg-orange{
+	background-color: #B75929;
+}
+
+.py-80{
+	padding-top: 80px;
+	padding-bottom: 80px;
+
+	@include mobile{
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
