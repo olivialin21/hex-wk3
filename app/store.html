@@ -8,21 +8,22 @@ current: store
 <main class="store">
   <div class="container section">
     <h2>門市據點</h2>
+    <div class="select">
+      <label for="position">選擇地點</label>
+      <select id="position" name=”position”>
+        <option value="Taipei">臺北市</option>
+        <option value="NewTaipei">新北市</option>
+        <option value="Taoyuan">桃園市</option>
+        <option value="Taichung">臺中市</option>
+        <option value="Tainan">臺南市</option>
+        <option value="Kaohsiung">高雄市</option>
+      </select>
+    </div>
     <section>
-      <div class="store-select">
-        <label for="position">選擇地點</label>
-        <select id="position" name=”position”>
-          <option value="Taipei">臺北市</option>
-          <option value="NewTaipei">新北市</option>
-          <option value="Taoyuan">桃園市</option>
-          <option value="Taichung">臺中市</option>
-          <option value="Tainan">臺南市</option>
-          <option value="Kaohsiung">高雄市</option>
-        </select>
-      </div>
       <ul class="store-list">
-        <li>
+        <li class="store-card">
           <picture>
+            <source srcset="./assets/images/mobile/store-1.png" media="(max-width: 576px)">
             <source srcset="./assets/images/tablet/store-1.png" media="(max-width: 992px)">
             <img src="./assets/images/desktop/store-1.png" alt="store-1">
           </picture>
@@ -40,8 +41,9 @@ current: store
           </ul>
           <a href="store_detail.html">詳細資訊</a>
         </li>
-        <li>
+        <li class="store-card">
           <picture>
+            <source srcset="./assets/images/mobile/store-2.png" media="(max-width: 576px)">
             <source srcset="./assets/images/tablet/store-2.png" media="(max-width: 992px)">
             <img src="./assets/images/desktop/store-2.png" alt="store-2">
           </picture>
@@ -59,8 +61,9 @@ current: store
           </ul>
           <a href="store_detail.html">詳細資訊</a>
         </li>
-        <li>
+        <li class="store-card">
           <picture>
+            <source srcset="./assets/images/mobile/store-3.png" media="(max-width: 576px)">
             <source srcset="./assets/images/tablet/store-3.png" media="(max-width: 992px)">
             <img src="./assets/images/desktop/store-3.png" alt="store-3">
           </picture>
@@ -78,8 +81,9 @@ current: store
           </ul>
           <a href="store_detail.html">詳細資訊</a>
         </li>
-        <li>
+        <li class="store-card">
           <picture>
+            <source srcset="./assets/images/mobile/store-4.png" media="(max-width: 576px)">
             <source srcset="./assets/images/tablet/store-4.png" media="(max-width: 992px)">
             <img src="./assets/images/desktop/store-4.png" alt="store-4">
           </picture>
@@ -97,8 +101,9 @@ current: store
           </ul>
           <a href="store_detail.html">詳細資訊</a>
         </li>
-        <li>
+        <li class="store-card">
           <picture>
+            <source srcset="./assets/images/mobile/store-5.png" media="(max-width: 576px)">
             <source srcset="./assets/images/tablet/store-5.png" media="(max-width: 992px)">
             <img src="./assets/images/desktop/store-5.png" alt="store-5">
           </picture>

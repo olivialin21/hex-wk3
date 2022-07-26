@@ -4,3 +4,43 @@ layout: ./app/layout.ejs
 engine: ejs
 current: store_detail
 ---
+
+<main class="store store-detail">
+  <div class="container section">
+    <h2>門市據點</h2>
+    <div class="select">
+      <label for="position">選擇地點</label>
+      <select id="position" name=”position”>
+        <option value="台北中山旗艦店">台北中山旗艦店</option>
+        <option value="台北綠園店">台北綠園店</option>
+        <option value="台中清水旗艦店">台中清水旗艦店</option>
+        <option value="高雄中正形象店">高雄中正形象店</option>
+        <option value="高雄夢時代店">高雄夢時代店</option>
+      </select>
+    </div>
+    <section class="store-content">
+      <div class="store-card">
+        <picture>
+          <source srcset="./assets/images/mobile/storepage-1.png" media="(max-width: 576px)">
+          <source srcset="./assets/images/tablet/storepage-1.png" media="(max-width: 992px)">
+          <img src="./assets/images/desktop/storepage-1.png" alt="storepage-1">
+        </picture>
+        <div>
+          <h3>台中清水旗艦店</h3>
+          <ul>
+            <li>
+              <i class="fa fa-phone" aria-hidden="true"></i>電話：(02)000-1234
+            </li>
+            <li>
+              <i class="fa fa-clock-o" aria-hidden="true"></i>營業時間：10:00-21:00
+            </li>
+            <li>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>地址：台中市清水區經南一路 23 號 8 樓
+            </li>
+          </ul>  
+        </div>
+      </div>
+      <div class="store-map"></div>
+    </section>
+  </div>
+</main>
