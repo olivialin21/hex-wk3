@@ -1,8 +1,10 @@
 @import "variables";
-@import "mixin";
 @import "reset";
+@import "mixin";
 @import "base";
 @import "layout";
 
+// page
 @import "index";
 @import "product";
+@import "store";
