@@ -6,10 +6,6 @@
     a{
       display: block;
       color: $c-white;
-   
-      &:hover{
-        color: $c-lightRed;
-      }
     }
   }
 }
@@ -29,28 +25,32 @@
   }
   .nav{
     @include nav{
-      flex-direction: column;
+      flex-wrap: wrap;
       max-height: 0px;
       position: absolute;
       z-index: 99;
       top: 80px;
       left: 0;
       right: 0;
-      background: $c-black;
+      background-color: $c-red;
       transition: max-height 1s;
       overflow: hidden;
 
       &.show{
-        max-height: 200px;
+        max-height: 112px;
+      }
+      li{
+        width: 50%;
+        border: 1px solid $c-white;
       }
     }
-
     a{
       padding: 0 32px;
       font-size: $fz-body4;
 
       @include nav{
-        padding: 10px 13px;
+        text-align: center;
+        padding: 12px 0;
       }
     }
     li:last-child a{
@@ -83,10 +83,6 @@
   }
   a{
     color: $c-white;
-
-    &:hover{
-      color: $c-lightRed;
-    }
   }
   .info{
     display: flex;
@@ -129,9 +125,6 @@
       @include mobile{
         width: 24px;
       }
-    }
-    a:hover img{
-      transform: scale(1.2);
     }
   }
   .info-2{

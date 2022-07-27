@@ -145,6 +145,12 @@
   background-position: center;
   background-size: cover;
 
+  @include pad{
+    background-image: url(../images/tablet/background-tablet.png);
+  }
+  @include mobile{
+    background-image: url(../images/mobile/background-phone.png);
+  }
   ul{
     display: flex;
 

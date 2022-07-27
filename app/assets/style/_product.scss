@@ -126,31 +126,6 @@
       }
     }
   }
-  .pages{
-    display: flex;   
-    justify-content: center;
-
-    a{
-      display: block;
-      margin-left: -1px;
-      padding: 0 16px;
-      line-height: 48px;
-      color: $c-black;
-      background-color: $c-white;
-      border: 1px solid #555;
-      
-      @include mobile{
-        padding: 0 12px;
-      }
-      &:hover{
-        background-color: #F2F2F2;
-      }
-      &.active{
-        color: $c-white;
-        background-color: $c-black;
-      }
-    }
-  }
 
   .section{
     @include mobile{

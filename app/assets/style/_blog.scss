@@ -1,0 +1,358 @@
+// blog
+.blog{
+  .title-redBorder{
+    @include pad{
+      margin-bottom: 40px;
+    }
+    @include mobile{
+      margin-bottom: 24px;
+    }
+  }
+  .sub-nav{
+    background-color: $c-darkRed;
+    
+    @include mobile{
+      display: none;
+    }
+    div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    ul{
+      display: flex;
+    }
+    a{
+      display: block;
+      padding: 13px 24px;
+      font-size: $fz-body4;
+      font-weight: bold;
+      color: $c-white;
+
+      @include mobile{
+        font-size: $fz-body5;
+        padding: 13px;
+      }
+    }
+    li:first-child a{
+      padding-left: 0;
+    }
+    .search{
+      padding: 8px;
+      vertical-align: middle;
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+  &-list{
+    margin-bottom: 124px;
+  
+    @include pad{
+      margin-bottom: 80px;
+    }
+    @include mobile{
+      margin-bottom: 64px;
+    }
+    li{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+
+      @include pad{
+        margin-bottom: 24px;
+      }
+      @include mobile{
+        flex-direction: column;
+      }
+    }
+    picture{
+      width: 50%;
+      margin-right: 24px;
+      
+      @include mobile{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
+      img{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+
+        @include pad{
+          height: 208px;
+        }
+      }
+    }
+  }
+  &-intro{
+    width: 50%;
+    position: relative;
+    
+    @include mobile{
+      width: 100%;
+    }
+    h3 a{
+      font-size: $fz-body2;
+      color: $c-darkRed;
+
+      @include pad{
+        font-size: $fz-body3;
+      }
+    }
+    div{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      font-weight: 500;
+
+      @include pad{
+        margin-bottom: 4px;
+      }
+      @include mobile{
+        margin-bottom: 0;
+      }
+    }
+    h4{
+      font-size: $fz-body4;
+
+      @include pad{
+        font-size: $fz-body5;
+      }
+    }
+    p{
+      font-size: $fz-body4;
+
+      @include pad{
+        font-size: $fz-body5;
+      }
+      @include mobile{
+        display: none;
+      }
+    }
+    .here{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-size: $fz-body1;
+      font-weight: 900;
+      color: $c-darkRed;
+
+      @include pad{
+        font-size: $fz-body5;
+        font-weight: normal;
+        text-transform: lowercase;
+        color: $c-black;
+      }
+      @include mobile{
+        display: none;
+      }
+    }
+  }
+}
+
+// blog-detail
+.blog-detail{
+  .section{
+    padding-top: 24px;
+
+    @include pad{
+      padding-top: 8px;
+    }
+    @include mobile{
+      padding-bottom: 64px;
+    }
+  }
+  .sub-nav{
+    @include mobile{
+      display: block;
+
+      li:last-child a{
+        padding-right: 0;
+      }
+      .search{
+        display: none;
+      }
+      ul{
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
+  .breadcrumb{
+    margin-bottom: 8px;
+
+    a{
+      color: $c-black;
+
+      &.active{
+        color: $c-red;
+      }
+    }
+  }
+  .tag{
+    font-size: $fz-body3;
+    font-weight: bold;
+    color: $c-red;
+
+    @include mobile{
+      font-size: $fz-body5;
+    }
+  }
+  .article-tag{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 8px;
+  }
+  h2{
+    font-size: $fz-title2;
+
+    @include mobile{
+      font-size: $fz-body3;
+    }
+  }
+  h3{
+    margin-bottom: 16px;
+    font-size: $fz-body3;
+
+    @include pad{
+      margin-bottom: 24px;
+    }
+    @include mobile{
+      margin-bottom: 16px;
+      font-size: $fz-body5;
+    }
+  }
+  section{
+    display: flex;
+    gap: 24px;
+  }
+  .blog-article{
+    width: calc(100% / 3 * 2);
+
+    @include pad{
+      width: calc(100% / 4 * 3);
+    }
+    @include mobile{
+      width: 100%;
+    }
+    img{
+      margin-bottom: 8px;
+      
+      @include pad{
+        margin-bottom: 16px;
+      }
+      @include mobile{
+        margin-bottom: 8px;
+      }
+    }
+    p{
+      color: #555;
+      margin-bottom: 40px;
+
+      @include pad{
+        margin-bottom: 24px;
+      }
+      @include mobile{
+        margin-bottom: 16px;
+        
+        &.last{
+          margin-bottom: 0;
+        }
+      }
+    }
+    .share{
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid $c-gray;
+      font-weight: bold;
+
+      @include pad{
+        margin-top: 40px;
+      }
+      a{
+        color: $c-black;
+      }
+      img{
+        width: 24px;
+        margin-bottom: 0;
+      }
+      @include mobile{
+        display: none;
+      }
+    }
+    .elsePage{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a{
+        color: $c-black;
+      }
+      i{
+        font-size: $fz-body3;
+        line-height: 24px;
+        vertical-align: -3px;
+      }
+      .mdi-arrow-left{
+        margin-right: 8px;
+      }
+      .mdi-arrow-right{
+        margin-left: 8px;
+      }
+      @include mobile{
+        display: none;
+      }
+    }
+  }
+  .tags{
+    width: calc(100% / 3);
+
+    @include pad{
+      width: calc(100% / 4);
+
+      img{
+        width: 24px;
+      }
+    }
+    @include mobile{
+      display: none;
+    }
+    h4{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+      font-size: $fz-body2;
+      font-weight: bold;
+      color: $c-red;
+
+      @include pad{
+        gap: 0;
+        margin-bottom: 8px;
+        font-size: $fz-body5;
+      }
+    }
+    li{
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 24px;
+
+      @include pad{
+        column-gap: 16px;
+      }
+    }
+    a{
+      display: block;
+      margin-bottom: 4px;
+
+      @include pad{
+        margin-bottom: 0;
+        font-size: $fz-body5;
+      }
+    }
+  }
+}
