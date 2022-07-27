@@ -1,0 +1,32 @@
+.container{
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 12px;
+
+	@include pad{
+		max-width: 720px;
+	}
+}
+.section{
+	padding-top: 80px;
+	padding-bottom: 80px;
+
+	@include mobile{
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+
+.c-white{
+	color: $c-white;
+}
+.bg-brown{
+	background-color: #5F3E2D;
+}
+.bg-orange{
+	background-color: #B75929;
+}
+.py-12{
+  padding-left: 12px;
+  padding-right: 12px;
+}
