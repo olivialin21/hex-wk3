@@ -854,7 +854,7 @@ a {
 
 .blog .sub-nav {
   background-color: #650300; }
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     .blog .sub-nav {
       display: none; } }
   .blog .sub-nav div {
@@ -877,7 +877,7 @@ a {
     font-size: 20px;
     font-weight: bold;
     color: #fff; }
-    @media (max-width: 576px) {
+    @media (max-width: 767px) {
       .blog .sub-nav a {
         font-size: 16px;
         padding: 13px; } }
@@ -997,7 +997,7 @@ a {
     .blog-detail .section {
       padding-bottom: 64px; } }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .blog-detail .sub-nav {
     display: block; }
     .blog-detail .sub-nav li:last-child a {
