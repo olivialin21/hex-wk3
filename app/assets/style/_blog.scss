@@ -11,7 +11,7 @@
   .sub-nav{
     background-color: $c-darkRed;
     
-    @include mobile{
+    @include nav{
       display: none;
     }
     div{
@@ -29,7 +29,7 @@
       font-weight: bold;
       color: $c-white;
 
-      @include mobile{
+      @include nav{
         font-size: $fz-body5;
         padding: 13px;
       }
@@ -164,7 +164,7 @@
     }
   }
   .sub-nav{
-    @include mobile{
+    @include nav{
       display: block;
 
       li:last-child a{
