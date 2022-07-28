@@ -163,8 +163,14 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .header img {
-    width: 80px; }
+  .header .logo {
+    width: 80px;
+    height: 48px;
+    text-indent: 101%;
+    text-wrap: nowrap;
+    overflow: hidden;
+    background-image: url(../images/desktop/logo.png);
+    background-size: cover; }
   @media (max-width: 767px) {
     .header .nav {
       -ms-flex-wrap: wrap;
